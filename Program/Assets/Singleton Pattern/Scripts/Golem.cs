@@ -2,16 +2,18 @@ using UnityEngine;
 
 public class Golem : Creature
 {
-    [SerializeField] Vector3 startPosition;
+    [SerializeField] float targetY;
+    [SerializeField] Vector3 originPosition;
 
     void Start()
     {
-        startPosition = transform.position;
+        originPosition = transform.position;
     }
 
     public override void Behaviour()
     {
-        float offset = Mathf.PingPong(Time.time * speed, 5f);
-        transform.position = startPosition + new Vector3(0, 0, offset - 2.5f);
+        float offset = Mathf.PingPong(Time.time * speed, targetY);
+
+        transform.position = originPosition + new Vector3(0, offset, 0);
     }
 }

@@ -7,7 +7,6 @@ public class Mushroom : Creature
 
     private void Start()
     {
-        maxSize = 3;
         originSize = transform.localScale;
     }
 
