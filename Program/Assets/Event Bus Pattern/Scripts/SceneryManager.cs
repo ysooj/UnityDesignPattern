@@ -67,6 +67,7 @@ public class SceneryManager : MonoBehaviour
 
                     asyncOperation.allowSceneActivation = true;
 
+                    yield return new WaitForSeconds(0.1f);
                     screen.SetActive(false);
 
                     //yield break;
