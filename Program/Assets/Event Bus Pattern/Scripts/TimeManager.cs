@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,7 @@ public class TimeManager : MonoBehaviour
     {
         EventManager.Subscribe(Condition.START, Execute);
         EventManager.Subscribe(Condition.PAUSE, Pause);
+        EventManager.Subscribe(Condition.FINISH, Exit);
     }
 
     void Execute()
@@ -29,11 +31,24 @@ public class TimeManager : MonoBehaviour
         state = false;
     }
 
+    public void Exit()
+    {
+        timeText.text = "Game Over";
+    }
+
     public IEnumerator Measure()
     {
         while (state)
         {
             time -= Time.deltaTime;
+
+            if (time <= 0)
+            {
+                EventManager.Publish(Condition.FINISH);
+                Exit();
+
+                yield break;
+            }
 
             minute = (int)time / 60;
             second = (int)time % 60;
@@ -48,5 +63,6 @@ public class TimeManager : MonoBehaviour
     {
         EventManager.Unsubscribe(Condition.START, Execute);
         EventManager.Unsubscribe(Condition.PAUSE, Pause);
+        EventManager.Unsubscribe(Condition.FINISH, Exit);
     }
 }

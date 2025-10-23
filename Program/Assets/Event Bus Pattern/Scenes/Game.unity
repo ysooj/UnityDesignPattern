@@ -810,7 +810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 804956866}
-  time: 70
+  time: 1
   minute: 0
   second: 0
   microsecond: 0
