@@ -10,6 +10,12 @@ public class WeaponManager : MonoBehaviour
 
     private void Start()
     {
+        // 모든 무기 비활성화
+        foreach (Weapon weapon in weapons)
+        {
+            weapon.gameObject.SetActive(false);
+        }
+
         count = 0;
         weapons[count].gameObject.SetActive(true);
     }
