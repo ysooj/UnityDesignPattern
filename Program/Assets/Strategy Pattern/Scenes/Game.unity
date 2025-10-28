@@ -137,9 +137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  knifeMoving: {x: 0, y: 0, z: -45}
-  distance: 0.5
-  speed: 2
 --- !u!95 &110460882
 Animator:
   serializedVersion: 7
@@ -203,6 +200,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6afcb84d63213ad4cbc5d7a48161be43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: 1ce63b96ebf4a96498fb5f251d495085, type: 2}
+  - {fileID: 2100000, guid: 5d6610a1dc8f4254382abc3d08abbbda, type: 2}
 --- !u!1001 &1196338380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -526,8 +527,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edcc93053ff8fbc4b933153f7080ad7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  duration: 0
 --- !u!4 &1776604272
 Transform:
   m_ObjectHideFlags: 0
