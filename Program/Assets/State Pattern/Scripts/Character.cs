@@ -9,6 +9,10 @@ public class Character : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
+    private void Start()
+    {
+        stateable = new Idle();
+    }
 
     void Update()
     {
