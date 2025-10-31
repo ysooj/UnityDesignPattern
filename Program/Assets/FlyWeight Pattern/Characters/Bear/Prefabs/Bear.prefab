@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ca91923babd5146965e090660c6798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bear
-  speed: 3
+  speed: 5
 --- !u!1 &2901057818819817089
 GameObject:
   m_ObjectHideFlags: 0
